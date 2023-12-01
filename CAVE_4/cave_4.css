@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-image: url(/JAVA_SCRIPT/CAVE_4/caveImage.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+.title{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner{
+    color: #617cdc;
+}
+
+#gameStart{
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 35px;
+    height: 40px;
+    justify-content: center;
+    font-family: calc();
+    font-family: initial;
+    font-weight: 700;
+    color: #617cdc;
+}
+
+/* body{    */
+   /* cursor: url('/IMAGES/FIREFLY_CAVE/White-Outline\ Net.png'), auto; */
+/* } */
+
+body{
+    font-family: Cinzel, serif;
+    color: aliceblue;
+    background-color: rgba(30, 25, 64, 0.163);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.score{
+    font-size: 30px;
+}
+
+.caveboard{
+    height: 600px;
+    width: 800px;
+    /* border: 3px solid  red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 100px;
+    background-color: rgba(77, 68, 91, 0.153);
+    opacity: 10;
+    /* filter: blur(-50px); */
+}
+
+#start{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hole{
+    background-color: rgba(57, 41, 65, 0.524);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    filter: blur( 10x);
+}
+
+.hole .firefly{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    bottom: 0;
+    animation: rise .1.5s ease-in-out;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+@keyframes rise{
+    0%{
+        transform: translateX(-50%) translateY(100%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(0%);
+    }
+}
